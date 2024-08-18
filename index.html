@@ -7,7 +7,10 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>World Relief</title>
-    <link rel="stylesheet" href="/css/styles.css"/>
+    <link
+      rel="stylesheet"
+      href="/css/styles.css"
+    />
   </head>
   <body>
     <main>
@@ -18,6 +21,88 @@
           <button class="Header-button">Donate Today</button>
         </header>
       </section>
+
+      <dialog class="DonationModal">
+        <article class="DonationModal-content">
+          <header class="DonationModal-header">
+            <span class="DonationModal-step">Step 1 of 3</span>
+            <button class="DonationModal-close">
+              close <span>&#10006;</span>
+            </button>
+          </header>
+          <section class="DonationModal-body">
+            <p class="DonationModal-title">Set up your Donation</p>
+            <section class="DonationModalPlan">
+              <button class="DonationModalPlan-button selected">Monthly</button>
+              <button class="DonationModalPlan-button">One-time</button>
+              <div class="DonationModalPlan-note">
+                <img
+                  src="/img/Icons_Give.svg"
+                  alt="hand grabbing a heart icon"
+                  class="DonationModalPlan-image"
+                />
+                <p>
+                  Monthly donors help sustain and create shanges for those who
+                  are displaced!
+                </p>
+              </div>
+            </section>
+            <section class="DonationModalAmount">
+              <p class="DonationModal-title">Amount</p>
+              <ul class="DonationModalAmount-options">
+                <li>
+                  <button class="DonationModalAmount-button selected">
+                    $25 <span class="MonthlySuffix">/monthly</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="DonationModalAmount-button">
+                    $55 <span class="MonthlySuffix">/monthly</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="DonationModalAmount-button">
+                    $75 <span class="MonthlySuffix">/monthly</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="DonationModalAmount-button">
+                    $100 <span class="MonthlySuffix">/monthly</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="OtherAmount">
+                <label
+                  for="OtherAmount-input"
+                  class="OtherAmount-title"
+                  >Other</label
+                >
+                <span class="OtherAmount-currency">$</span>
+                <input
+                  id="OtherAmount-input"
+                  class="OtherAmount-input"
+                  type="number"
+                  placeholder="0"
+                  min="0"
+                />
+                <span class="MonthlySuffix">/monthly</span>
+              </div>
+            </section>
+          </section>
+          <footer class="DonationModal-footer">
+            <button class="DonationModal-back">
+              <span>&larr;</span> Go back
+            </button>
+            <button class="DonationModalNextStep-button">
+              Continue to next step
+            </button>
+          </footer>
+        </article>
+      </dialog>
     </main>
   </body>
+  <script
+    type="text/javascript"
+    src="/js/modal.js"
+  ></script>
 </html>

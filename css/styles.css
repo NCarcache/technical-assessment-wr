@@ -7,6 +7,13 @@
     padding: 0;
     font-family: Roboto, sans-serif;
     box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+::backdrop {
+    background-color: #3a3a3a;
+    opacity: 0.7;
 }
 
 /* header */
@@ -47,7 +54,6 @@
 
 .Header-button {
     background-color: #009ddc;
-    border: none;
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
@@ -91,6 +97,223 @@
 
     .Header-subtitle {
         font-size: 18px;
+    }
+
+}
+
+/* Donation Modal */
+
+.DonationModal {
+    padding: 20px;
+    margin: auto;
+    max-width: 560px;
+    width: 100%;
+}
+
+.DonationModal-header,
+.DonationModal-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.DonationModal-header {
+    margin-bottom: 15px;
+}
+
+.DonationModal-step {
+    color: #323232;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.DonationModal-close {
+    color: #636363;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.DonationModal-close span {
+    font-size: 18px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.DonationModal-title {
+    color: #323232;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    margin-bottom: 28px;
+}
+
+.DonationModal-body {
+    margin-bottom: 120px;
+}
+
+.DonationModalPlan {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.DonationModalPlan-button {
+    color: #646464;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 10px 50px;
+}
+
+.DonationModalPlan-button.selected {
+    color: #fff;
+    background-color: #009ddc;
+}
+
+.DonationModalPlan-note {
+    color: #646464;
+    font-size: 18px;
+    line-height: 1.5;
+    display: flex;
+    gap: 15px;
+    max-width: 354px;
+    padding: 20px 10px;
+    width: 100%;
+}
+
+.DonationModalPlan-image {
+    height: 48px;
+    width: 48px;
+}
+
+.DonationModalAmount {
+    margin-bottom: 20px;
+}
+
+.DonationModalAmount-options {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.DonationModalAmount-button {
+    background-color: transparent;
+    border-radius: 5px;
+    color: #323232;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 12px 50px;
+    width: 100%;
+}
+
+.DonationModalAmount-button.selected {
+    background-color: #009ddc;
+    color: #fff;
+    font-weight: 500;
+}
+
+.DonationModalAmount-button.selected .MonthlySuffix {
+    color: #fff;
+}
+
+.DonationModal-footer {
+    padding: 0 10px;
+}
+
+.DonationModalNextStep-button {
+    background-color: #009ddc;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 20px;
+    text-transform: uppercase;
+}
+
+.DonationModalNextStep-button:hover {
+    background-color: #3ac0f5;
+}
+
+.DonationModal-back {
+    opacity: 0;
+    color: #636363;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.DonationModal-back span {
+    font-size: 20px;
+
+}
+
+.OtherAmount {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.OtherAmount-title {
+    color: #323232;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+}
+
+.OtherAmount-currency {
+    color: #323232;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.OtherAmount-input {
+    font-size: 16px;
+    width: 100%;
+}
+
+.MonthlySuffix {
+    color: #636363;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* mobile resolution */
+
+@media (max-width: 576px) {
+    .DonationModal{
+        max-width: 300px;
+    }
+
+    .DonationModal-title, .OtherAmount-title{
+        font-size: 24px;
+    }
+
+    .DonationModalPlan-note{
+        font-size: 16px;
+        padding: 10px;
+    }
+    
+    .DonationModal-body {
+        margin-bottom: 50px;
+    }
+
+    .DonationModalPlan-button {
+        font-size: 20px;
+        padding: 8px 20px;
+    }
+
+    .DonationModalAmount-button {
+        font-size: 20px;
+        padding: 10px 40px;
+        width: 100%;
     }
 
 }
